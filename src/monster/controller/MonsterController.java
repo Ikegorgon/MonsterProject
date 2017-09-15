@@ -13,6 +13,9 @@ public class MonsterController {
 		Monster newMonster = new Monster("Juble", false, 4, 7, 1, 34);
 		System.out.println(monster);
 		System.out.println(newMonster);
+		System.out.println("Juble was attacked and lost a few arms.");
+		newMonster.setarm(newMonster.getarm() - 3);
+		System.out.println(newMonster);
 		
 		System.out.println("Create a Monster!");
 		
