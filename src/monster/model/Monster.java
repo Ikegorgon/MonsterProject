@@ -29,9 +29,11 @@ public class Monster {
 	public String toString() {
 		String description;
 		if (belly) {
-			description = name + " is a monster with " + leg + " legs, a belly button, " + noses + " noses, " + eyes + " eyes, and " + arm+ " arms.";
+			description = name + " is a monster with " + leg + " legs, a belly button, ";
+			description += noses + " noses, " + eyes + " eyes, and " + arm+ " arms.";
 		} else {
-			description = name + " is a monster with " + leg + " legs, no belly button, " + noses + " noses, " + eyes + " eyes, and " + arm+ " arms.";
+			description = name + " is a monster with " + leg + " legs, no belly button, ";
+			description += noses + " noses, " + eyes + " eyes, and " + arm+ " arms.";
 		}
 		return description;
 	}
