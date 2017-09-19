@@ -7,16 +7,7 @@ public class MonsterController {
 	public MonsterController() {
 		
 	}
-	
-	public void start() {
-		Monster monster = new Monster();
-		Monster newMonster = new Monster("Juble", false, 4, 7, 1, 34);
-		System.out.println(monster);
-		System.out.println(newMonster);
-		System.out.println("Juble was attacked and lost a few arms.");
-		newMonster.setarm(newMonster.getarm() - 3);
-		System.out.println(newMonster);
-		
+	public void create() {
 		System.out.println("Create a Monster!");
 		
 		Scanner nameScanner = new Scanner(System.in);
@@ -46,6 +37,18 @@ public class MonsterController {
 		Monster myMonster = new Monster(name, belly, legs, noses, eyes, arms);
 		
 		System.out.println(myMonster);
-		
+	}
+	public void start() {
+		Monster monster = new Monster();
+		Monster newMonster = new Monster("Juble", false, 4, 7, 1, 34);
+		System.out.println(monster);
+		System.out.println(newMonster);
+		System.out.println("Juble was attacked and lost a few arms.");
+		newMonster.setarm(newMonster.getarm() - 3);
+		System.out.println(newMonster);
+		boolean CreateMonster = true;
+		while (CreateMonster) {
+			create();
+		}
 	}
 }
