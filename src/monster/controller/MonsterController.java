@@ -2,10 +2,12 @@ package monster.controller;
 
 import monster.model.Monster;
 import java.util.Scanner;
+import monster.view.MonsterDisplay;
 
 public class MonsterController {
-	public MonsterController() {
-		
+	private MonsterDisplay popup;
+	public MonsterController () {
+		popup = new MonsterDisplay();
 	}
 	public void create() {
 		System.out.println("Create a Monster!");
@@ -37,6 +39,12 @@ public class MonsterController {
 		Monster myMonster = new Monster(name, belly, legs, noses, eyes, arms);
 		
 		System.out.println(myMonster);
+//		nameScanner.close();
+//		bellyScanner.close();
+//		legScanner.close();
+//		nosesScanner.close();
+//		eyesScanner.close();
+//		armsScanner.close();
 	}
 	public void start() {
 		Monster monster = new Monster();
@@ -46,6 +54,9 @@ public class MonsterController {
 		System.out.println("Juble was attacked and lost a few arms.");
 		newMonster.setarm(newMonster.getarm() - 3);
 		System.out.println(newMonster);
+		popup.displayText("Ready to play?");
+		String answer = popup.getResponse("How's it going?");
+		System.out.println(answer);
 		boolean CreateMonster = true;
 		while (CreateMonster) {
 			create();
